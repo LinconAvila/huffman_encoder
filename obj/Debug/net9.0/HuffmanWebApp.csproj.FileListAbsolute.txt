@@ -192,3 +192,4 @@ C:\Users\linco\Documents\github_repositories\huffman_algorithm\obj\Debug\net9.0\
 C:\Users\linco\Documents\github_repositories\huffman_algorithm\obj\Debug\net9.0\HuffmanWebApp.pdb
 C:\Users\linco\Documents\github_repositories\huffman_algorithm\obj\Debug\net9.0\HuffmanWebApp.genruntimeconfig.cache
 C:\Users\linco\Documents\github_repositories\huffman_algorithm\obj\Debug\net9.0\ref\HuffmanWebApp.dll
+C:\Users\linco\Documents\github_repositories\huffman_algorithm\obj\Debug\net9.0\HuffmanWebApp.sourcelink.json
