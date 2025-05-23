@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Huffman Encoder";
+    var encoded = ViewBag.EncodedText as string;
+    var codes = ViewBag.Codes as Dictionary<char, string>;
+    var input = ViewBag.InputText as string;
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <h1 class="h4 mb-3 text-center">Compacte seu texto</h1>
+
+                <form method="post" class="mb-4">
+                    <textarea name="inputText" class="form-control mb-3" rows="4"
+                        placeholder="Digite aqui…">@input</textarea>
+
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-lg" type="submit">Codificar</button>
+                    </div>
+                </form>
+
+                @if (encoded != null)
+                {
+                    <div class="alert alert-success mb-4">
+                        <strong>Resultado codificado:</strong>
+                        <p class="mb-0"><code>@encoded</code></p>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Caracter</th>
+                                    <th>Código</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var kvp in codes!)
+                                {
+                                    <tr>
+                                        <td>
+                                            @(char.IsWhiteSpace(kvp.Key)
+                                                                                ? $"[{kvp.Key}]"
+                                                                                : kvp.Key.ToString())
+                                </td>
+                                <td><code>@kvp.Value</code></td>
+                            </tr>
+                                                        }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.Error</div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
