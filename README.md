@@ -2,7 +2,7 @@
 
 A web encoder for text compression using the Huffman algorithm, implemented in C# (ASP.NET Core).
 
-![Interface Screenshot](interface_screenshot\interface.png)
+![Interface Screenshot](https://github.com/LinconAvila/huffman_encoder/blob/main/interface_screenshot/interface.png)
 
 ## 📚 About the Huffman Algorithm
 
